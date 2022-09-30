@@ -1,7 +1,148 @@
+// html {
+//   box-sizing: border-box;
+// }
+
+// *,
+// *::after,
+// *::before {
+//   box-sizing: inherit;
+//   margin: 0;
+//   padding: 0;
+// }
+
+// body {
+//   width: 100%;
+// }
+
+// // HEADER
+
+// .header {
+//   display: flex;
+//   justify-content: space-between;
+//   background-color: grey;
+//   width: 100%;
+//   font-weight: bold;
+//   margin: 0%;
+//   height: 8vh;
+//   margin-bottom: 3rem;
+
+//   h4 {
+//     margin-left: 20px;
+//   }
+
+//   .nav {
+//     width: 20%;
+//     display: flex;
+//     justify-content: space-around;
+//     align-items: center;
+//     margin-right: 20px;
+//     font-weight: lighter;
+//   }
+// }
+
+// // FEATURED EVENT
+
+// .featured {
+//   width: 80%;
+//   height: 300px;
+//   background-color: #ddd;
+//   display: flex;
+//   justify-content: space-between;
+
+//   margin: 0 auto;
+
+//   &__container {
+//     display: flex;
+//     justify-content: center;
+
+//     .featured__name {
+//       height: 100px;
+//       margin: auto 0;
+//       transform: rotateZ(-90deg);
+//       align-self: center;
+//     }
+
+//     .featured__image {
+//       width: 50%;
+//       height: 50%;
+//     }
+//   }
+// }
+
+// .featured__register-btn {
+//   align-self: flex-end;
+// }
+
+// // Small cards
+// .cards {
+//   display: grid;
+//   grid-template-columns: 1fr 1fr 1fr;
+//   gap: 1rem;
+
+//   .card {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     width: 70%;
+//     background-color: lightgray;
+//     border-radius: 3%;
+//     text-align: center;
+//     padding: 7px;
+
+//     button {
+//       padding: 10px;
+//       width: 50%;
+//     }
+//   }
+// }
+
+// // Modal
+// .modal {
+//   width: 100%;
+//   height: 100vh;
+//   padding: 3.2rem 6.4rem;
+//   text-align: center;
+//   position: relative;
+//   // display: none;
+
+//   &__button_close {
+//     position: absolute;
+//     top: 1rem;
+//     right: 1rem;
+
+//     div {
+//       background-color: black;
+//       height: 3px;
+//       width: 40px;
+//       cursor: pointer;
+
+//       &:nth-child(1) {
+//         transform: rotateZ(45deg);
+//         position: absolute;
+//         top: 0;
+//         right: 0;
+//       }
+//       &:nth-child(2) {
+//         transform: rotateZ(-45deg);
+//         position: absolute;
+//         top: 0;
+//         right: 0;
+//       }
+//     }
+//   }
+//   &__form {
+//     width: 100%;
+//     height: 80vh;
+//     display: grid;
+//     grid-template-columns: 1fr 1fr;
+//     justify-items: center;
+//     align-items: center;
+//   }
+// }
+
 html {
   box-sizing: border-box;
 }
-
 *,
 *::after,
 *::before {
@@ -9,13 +150,10 @@ html {
   margin: 0;
   padding: 0;
 }
-
 body {
   width: 100%;
 }
-
 // HEADER
-
 .header {
   display: flex;
   justify-content: space-between;
@@ -25,11 +163,10 @@ body {
   margin: 0%;
   height: 8vh;
   margin-bottom: 3rem;
-
+  align-items: center;
   h4 {
     margin-left: 20px;
   }
-
   .nav {
     width: 20%;
     display: flex;
@@ -39,63 +176,65 @@ body {
     font-weight: lighter;
   }
 }
-
 // FEATURED EVENT
-
 .featured {
   width: 80%;
   height: 300px;
   background-color: #ddd;
   display: flex;
   justify-content: space-between;
-
+  padding: 2rem;
   margin: 0 auto;
-
+  margin-bottom: 2rem;
   &__container {
     display: flex;
     justify-content: center;
-
+    align-items: center;
+    gap: 1rem;
     .featured__name {
       height: 100px;
       margin: auto 0;
       transform: rotateZ(-90deg);
       align-self: center;
     }
-
     .featured__image {
-      width: 50%;
-      height: 50%;
+      width: 30%;
+    }
+    .featured__text {
+      display: flex;
+      align-items: center;
+    }
+    .featured__text-description {
+      display: flex;
+      align-items: center;
+      margin-left: 20px;
     }
   }
 }
-
 .featured__register-btn {
   align-self: flex-end;
 }
-
 // Small cards
 .cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 1rem;
-
+  display: flex;
+  justify-content: space-around;
   .card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 70%;
+    height: 200px;
+    width: 200px;
     background-color: lightgray;
     border-radius: 3%;
+    justify-content: space-around;
     text-align: center;
-    padding: 7px;
-
+    margin-top: 50px;
     button {
       padding: 10px;
       width: 50%;
     }
   }
 }
-
 // Modal
 .modal {
   width: 100%;
@@ -104,18 +243,15 @@ body {
   text-align: center;
   position: relative;
   // display: none;
-
   &__button_close {
     position: absolute;
     top: 1rem;
     right: 1rem;
-
     div {
       background-color: black;
       height: 3px;
       width: 40px;
       cursor: pointer;
-
       &:nth-child(1) {
         transform: rotateZ(45deg);
         position: absolute;
