@@ -1,14 +1,33 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+}
+
+// HEADER
+
 .header {
     display: flex;
     justify-content: space-between;
-    background-color: lightgray;
+    background-color: grey;
     width: 100%;
     font-weight: bold;
-
+    margin: 0%;
+    height: 8vh;
+    margin-bottom: 3rem;
 
     h4 {
         margin-left: 20px;
-
     }
 
     .nav {
@@ -20,6 +39,43 @@
         font-weight: lighter;
     }
 }
+
+// FEATURED EVENT
+
+.featured {
+    width: 80%;
+    height: 300px;
+    background-color: #ddd;
+    display: flex;
+    justify-content: space-between;
+
+    margin: 0 auto;
+
+    &__container {
+        display: flex;
+        justify-content: center;
+
+        .featured__name {
+            height: 100px;
+            margin: auto 0;
+            transform: rotateZ(-90deg);
+            align-self: center;
+        }
+
+        .featured__image {
+            width: 50%;
+            height: 50%;
+        }
+    }
+
+
+}
+
+
+.featured__register-btn {
+    align-self: flex-end;
+}
+
 
 .card {
     display: flex;
