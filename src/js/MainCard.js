@@ -2,6 +2,7 @@ export default class MainCard {
   constructor() {
     this.getData();
     this.element = document.createElement("div");
+    this.modalWindow = document.querySelector(".modal");
   }
 
   getData = async () => {
@@ -35,6 +36,14 @@ export default class MainCard {
           </div>
           <button class="featured__register-btn">Register</button>
           `;
+    const btnModalOPen = this.element.querySelector(".featured__register-btn");
+    btnModalOPen.addEventListener("click", this.displayModal.bind(this));
+
     document.body.appendChild(this.element);
   };
+
+  displayModal() {
+    console.log(this);
+    this.modalWindow.style.display = "block";
+  }
 }

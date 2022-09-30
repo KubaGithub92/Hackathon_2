@@ -30,15 +30,5 @@ export default class SmallCard {
         `;
       document.body.appendChild(this.element);
     }
-    // this.data.forEach((event, i) => {
-    //   this.element.classList.add("cards");
-    //   this.element.innerHTML += `
-    //   <div class="card">
-    //     <h3>${event.name}</h3>
-    //     <button>More</button>
-    //   </div>
-    //   `;
-    //   document.body.appendChild(this.element);
-    // });
   };
 }

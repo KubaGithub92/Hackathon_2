@@ -8,7 +8,7 @@
     <title>Events in Prague</title>
   </head>
   <body>
-    <!-- <header class="header">
+    <header class="header">
       <h4>Events in Prague</h4>
       <div class="nav">
         <nav>Home</nav>
@@ -16,7 +16,7 @@
         <nav>Contact</nav>
       </div>
     </header>
-
+    <!-- 
     <div class="featured">
       <div class="featured__container featured__container_left">
         <div class="featured__name">Featured event</div>
@@ -39,11 +39,43 @@
     </div> -->
 
     <div class="modal">
-      <form class="modal__form" method="post">
-        <label for="first-name">First Name</label>
-        <input type="text" id="first-name" />
-        <label for="second-name">Second Name</label>
-        <input type="text" id="second-name" />
+      <div class="modal__button modal__button_close">
+        <div></div>
+        <div></div>
+      </div>
+      <h2 class="modal__heading">Register for featured event</h2>
+      <p class="modal__description">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo ut
+        numquam culpa delectus quod commodi a rerum ad expedita harum nobis
+        nostrum in, quis odio modi, sunt dolorum. Ratione in vero quidem
+        excepturi sequi quia laborum tenetur nostrum nobis, ipsa, enim aut ab
+        rem maxime. Fuga adipisci at asperiores eaque.
+      </p>
+      <form class="modal__form">
+        <div class="modal__input-container">
+          <label for="first-name">First Name</label>
+          <input type="text" id="first-name" required />
+        </div>
+        <div class="modal__input-container">
+          <label for="second-name">Second Name</label>
+          <input type="text" id="second-name" required />
+        </div>
+        <div class="modal__input-container">
+          <label for="email">Email</label>
+          <input type="email" id="email" required />
+        </div>
+        <div class="modal__input-container">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" />
+        </div>
+        <div class="modal__input-container">
+          <label for="age-verification">I am old enough to participate</label>
+          <input type="checkbox" id="age-verification" required />
+        </div>
+
+        <button class="modal__button modal__button_register">
+          Click to send
+        </button>
       </form>
     </div>
 
