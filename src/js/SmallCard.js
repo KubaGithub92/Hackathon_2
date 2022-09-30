@@ -1,3 +1,5 @@
+import Modal from "./Modal";
+
 export default class SmallCard {
   constructor() {
     this.getData();
@@ -22,12 +24,19 @@ export default class SmallCard {
   renderEvent = () => {
     for (let i = 1; i < this.data.length; i++) {
       this.element.classList.add("cards");
-      this.element.innerHTML += `
+      this.element.insertAdjacentHTML(
+        "afterbegin",
+        `
         <div class="card">
           <h3>${this.data[i].name}</h3>
           <button>More</button>
         </div>
-        `;
+        `
+      );
+      this.btnMore = this.element.querySelector("button");
+      this.btnMore.addEventListener("click", () => {
+        new Modal();
+      });
       document.body.appendChild(this.element);
     }
   };

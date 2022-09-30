@@ -1,3 +1,5 @@
+import Modal from "./Modal";
+
 export default class MainCard {
   constructor() {
     this.getData();
@@ -44,6 +46,6 @@ export default class MainCard {
 
   displayModal() {
     console.log(this);
-    this.modalWindow.style.display = "block";
+    new Modal();
   }
 }

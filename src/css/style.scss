@@ -87,6 +87,7 @@ body {
     background-color: lightgray;
     border-radius: 3%;
     text-align: center;
+    padding: 7px;
 
     button {
       padding: 10px;
@@ -102,7 +103,7 @@ body {
   padding: 3.2rem 6.4rem;
   text-align: center;
   position: relative;
-  display: none;
+  // display: none;
 
   &__button_close {
     position: absolute;
