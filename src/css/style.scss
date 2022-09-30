@@ -1,73 +1,94 @@
 html {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 *,
 *::after,
 *::before {
-  box-sizing: inherit;
-  margin: 0;
-  padding: 0;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  width: 100%;
+    width: 100%;
 }
 
 // HEADER
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  background-color: grey;
-  width: 100%;
-  font-weight: bold;
-  margin: 0%;
-  height: 8vh;
-  margin-bottom: 3rem;
-
-  h4 {
-    margin-left: 20px;
-  }
-  .nav {
-    width: 20%;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-right: 20px;
-    font-weight: lighter;
-  }
+    justify-content: space-between;
+    background-color: grey;
+    width: 100%;
+    font-weight: bold;
+    margin: 0%;
+    height: 8vh;
+    margin-bottom: 3rem;
+
+    h4 {
+        margin-left: 20px;
+    }
+
+    .nav {
+        width: 20%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-right: 20px;
+        font-weight: lighter;
+    }
 }
 
 // FEATURED EVENT
 
 .featured {
-  width: 80%;
-  height: 300px;
-  background-color: #ddd;
-  display: flex;
-  justify-content: space-between;
-
-  margin: 0 auto;
-
-  &__container {
+    width: 80%;
+    height: 300px;
+    background-color: #ddd;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 
-    .featured__name {
-      height: 100px;
-      margin: auto 0;
-      transform: rotateZ(-90deg);
-      align-self: center;
+    margin: 0 auto;
+
+    &__container {
+        display: flex;
+        justify-content: center;
+
+        .featured__name {
+            height: 100px;
+            margin: auto 0;
+            transform: rotateZ(-90deg);
+            align-self: center;
+        }
+
+        .featured__image {
+            width: 50%;
+            height: 50%;
+        }
     }
 
-    .featured__image {
-      width: 50%;
-      height: 50%;
-    }
-  }
 
-  .featured__register-btn {
+}
+
+
+.featured__register-btn {
     align-self: flex-end;
-  }
+}
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+    height: 20%;
+    background-color: lightgray;
+    padding: 10%;
+    border-radius: 3%;
+
+    button {
+        padding: 10px;
+        width: 50%;
+    }
 }
