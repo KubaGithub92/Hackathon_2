@@ -14,6 +14,32 @@ body {
   width: 100%;
 }
 
+// HEADER
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: grey;
+  width: 100%;
+  font-weight: bold;
+  margin: 0%;
+
+  h4 {
+    margin-left: 20px;
+  }
+
+  .nav {
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 20px;
+    font-weight: lighter;
+  }
+}
+
+// Featured event
+
 .featured {
   width: 80%;
   height: 300px;
