@@ -2,6 +2,7 @@ export default class Modal {
   constructor() {
     this.element = document.createElement("div");
     this.createModal();
+    this.main = document.querySelector("main");
   }
 
   createModal() {
@@ -55,6 +56,7 @@ export default class Modal {
 
     this.btnClose.addEventListener("click", () => {
       this.element.style.display = "none";
+      this.main.classList.remove("hidden");
     });
 
     this.btnRegister.addEventListener("click", (e) => {
@@ -72,6 +74,7 @@ export default class Modal {
     const email = document.getElementById("email").value;
     const phone = document.getElementById("phone").value;
     const age = document.getElementById("age-verification").value;
+    // console.log(firstName, secondName, email, phone, age);
 
     this.dataObject = {
       firstName,

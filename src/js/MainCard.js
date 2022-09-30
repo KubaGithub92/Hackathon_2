@@ -5,6 +5,7 @@ export default class MainCard {
     this.getData();
     this.element = document.createElement("div");
     this.modalWindow = document.querySelector(".modal");
+    this.main = document.querySelector("main");
   }
 
   getData = async () => {
@@ -39,13 +40,17 @@ export default class MainCard {
           <button class="featured__register-btn">Register</button>
           `;
     const btnModalOPen = this.element.querySelector(".featured__register-btn");
-    btnModalOPen.addEventListener("click", this.displayModal.bind(this));
+    btnModalOPen.addEventListener("click", () => {
+      this.main.classList.add("hidden");
+      console.log(this.main);
+      new Modal();
+    });
 
-    document.body.appendChild(this.element);
+    this.main.appendChild(this.element);
   };
 
-  displayModal() {
-    console.log(this);
-    new Modal();
-  }
+  // displayModal() {
+  //   // console.log(this);
+  //   new Modal();
+  // }
 }

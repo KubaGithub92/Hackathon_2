@@ -203,6 +203,7 @@ body {
     .featured__text {
       display: flex;
       align-items: center;
+      text-align: justify;
     }
     .featured__text-description {
       display: flex;
@@ -274,4 +275,8 @@ body {
     justify-items: center;
     align-items: center;
   }
+}
+
+.hidden {
+  display: none;
 }

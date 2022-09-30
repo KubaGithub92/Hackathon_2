@@ -4,6 +4,7 @@ export default class SmallCard {
   constructor() {
     this.getData();
     this.element = document.createElement("div");
+    this.main = document.querySelector("main");
   }
 
   getData = async () => {
@@ -36,8 +37,9 @@ export default class SmallCard {
       this.btnMore = this.element.querySelector("button");
       this.btnMore.addEventListener("click", () => {
         new Modal();
+        this.main.classList.add("hidden");
       });
-      document.body.appendChild(this.element);
+      this.main.appendChild(this.element);
     }
   };
 }
